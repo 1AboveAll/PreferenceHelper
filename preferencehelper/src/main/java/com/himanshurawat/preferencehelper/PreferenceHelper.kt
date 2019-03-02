@@ -67,6 +67,11 @@ class PreferenceHelper private constructor(){
         return sharedPreferences.getLong(key,defValue)
     }
 
+    fun getBoolean(key: String, defValue: Boolean): Boolean{
+        checkKey(key)
+        return sharedPreferences.getBoolean(key,false)
+    }
+
     fun contains(key: String): Boolean{
         checkKey(key)
         return sharedPreferences.contains(key)
